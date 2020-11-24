@@ -1,0 +1,8 @@
+
+.icon-home:before { content: '\2302'; } /* '⌂' */
+.icon-mail:before { content: '\2709'; } /* '✉' */
+.icon-attach:before { content: '\e06d'; } /* '' */
+.icon-videocam:before { content: '\f03a'; } /* '' */
+.icon-circle:before { content: '\f111'; } /* '' */
+.icon-mail-squared:before { content: '\f199'; } /* '' */
+.icon-comment:before { content: '\f4ac'; } /* '' */
