@@ -27,25 +27,37 @@
     {
       "uid": "a17986e457f3d85f26c9c240dfd6a4ba",
       "css": "mail",
-      "code": 9993,
+      "code": 59392,
       "src": "mfglabs"
     },
     {
       "uid": "0be76e79cf83a68ecb961121c00b9f2d",
       "css": "attach",
-      "code": 57453,
+      "code": 59393,
       "src": "elusive"
     },
     {
       "uid": "513ac180ff85bd275f2b736720cbbf5e",
       "css": "home",
-      "code": 8962,
+      "code": 59394,
       "src": "entypo"
     },
     {
       "uid": "130380e481a7defc690dfb24123a1f0c",
       "css": "circle",
       "code": 61713,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ad6b3fbb5324abe71a9c0b6609cbb9f1",
+      "css": "right-big",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "555ef8c86832e686fef85f7af2eb7cde",
+      "css": "left-big",
+      "code": 59396,
       "src": "fontawesome"
     }
   ]

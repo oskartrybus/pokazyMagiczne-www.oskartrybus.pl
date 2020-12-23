@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="css/fontello.css" type="text/css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@500&family=Fira+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -29,9 +30,9 @@
 		<div class="topnav" id="navbar">
 		
 			<a id="home" href="#" class="active">HOME  <i class="icon-home"></i></a>
-			<a id="kontakt" href="#">KONTAKT  <i class="icon-mail"></i></a>
-			<a id="film" href="#">FILM  <i class="icon-videocam"></i></a>
-			<a id="oferta" href="#">OFERTA  <i class="icon-attach"></i></a>
+			<a id="contact" href="#">KONTAKT  <i class="icon-mail"></i></a>
+			<a id="mymovie" href="#">FILM  <i class="icon-videocam"></i></a>
+			<a id="myoffer" href="#">OFERTA  <i class="icon-attach"></i></a>
 			
 			<a href="javascript:void(0);" class="icon" onclick="showNavBar()">
 			<!--  This icon is visible on small screens. -->
@@ -41,43 +42,54 @@
 
 		<div class="main-content">
 			
+			<div class="main">
+				OSKAR TRYBUS <br/>
+				<span style="font-size: 0.60em;">POKAZY ILUZJONISTYCZNE</span>
+				<div class="quote">
+					“The moment you doubt whether you can fly, you cease for ever to be able to do it.”
+					― J. M. Barrie, Piotruś Pan
+				</div> <!-- quote --> 
+				
+				<a id="orderShow" href="#"><div class="call-to-action"> ZAMÓW POKAZ </div></a>
+				 
+			</div> <!-- main -->
+			
 			<div class="main-photo">
 				<img src="img/roza_przezr.png">
 			</div><!-- main photo-->
-
-			<div class="main">
-				OSKAR TRYBUS <br/>
-				<span style="font-size: 0.65em;">POKAZY ILUZJONISTYCZNE</span>
-				<div class="quote">
-					<span style="font-size: 0.5em; margin-top: 10%; font-family: 'Dancing Script', cursive;">“The moment you doubt whether you can fly, you cease for ever to be able to do it.”
-					― J. M. Barrie, Peter Pan </span>
-				</div> <!-- quote --> 
-			</div> <!-- main -->
 			
 			<div style = "clear:both"> </div>
 			</div> <!-- main-content-->
 			
-			<div id="oferta1"></div>	<!--  navigation div -->
-			
-			
+			<div id="offer1"></div>	<!--  navigation div -->
 			
 			<div class="rest-content">
+			
 				<div class="offer">
-					
+	
 					<div class="offer-desc">
 							<h3> Pokazy stand-up </h3>
 							Ta opcja to często wybierana forma pokazu. Jest to połączenie występu przed kilkudziesięcioosobową pubilcznością wraz z bezpośrednim udziałem niektórych widzów. Takiemu show towarzyszy spora dawka uśmiechu oraz magicznych wrażeń. Pokazy stand-up świetnie sprawdzają się na imprezach okolicznościowych takich jak m.in.: wesela, urodziny, wieczory panieńskie czy imprezy firmowe.
 					</div> <!-- offer-desc  -->
 	
-					<div class="offer-photo">
-						<div id="slider"></div>
-						<span onclick="ustawslajd(1)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd(2)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd(3)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd(4)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd(5)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-					</div> <!-- offer-photo  -->
-	
+					<div class="photo-with-dots">
+					
+						<div class="offer-photo">
+							<div id="slider"></div>
+						</div> <!-- offer-photo  -->
+						
+						<div style="clear: both;"></div>
+						<span  style="cursor:pointer; font-size: 12px;"> 
+						<div class="previous" onclick="previousSlide1()"> <i class="icon-left-big"></i></div>	
+						<div id="dot1-1" onclick="setSlide(1)" style="display: inline;"><i class="icon-circle"></i> </div>
+						<div id="dot1-2" onclick="setSlide(2)" style="display: inline;"> <i class="icon-circle"></i> </div>
+						<div id="dot1-3" onclick="setSlide(3)" style="display: inline;" > <i class="icon-circle"></i> </div>
+						<div id="dot1-4" onclick="setSlide(4)" style="display: inline;"> <i class="icon-circle"></i> </div>
+						<div id="dot1-5" onclick="setSlide(5)" style="display: inline;"> <i class="icon-circle"></i> </div>
+						<div class="next" onclick="nextSlide1()"> <i class="icon-right-big"></i> </div>	
+						</span>
+						
+					</div>  <!-- photo-with-dots -->
 				</div> <!-- offer -->
 				
 				<div style="clear: both;"></div>
@@ -85,17 +97,27 @@
 	
 					<div class="offer-desc2">
 							<h3> Mikroiluzja (close-up) </h3>
-							Mikroiluzja to kategoria sztuki iluzji obejmująca prezentacje efektów iluzjonistycznych z zastosowaniem małych rekwizytów, takich jak: karty, monety oraz przedmioty codziennego użytku. Pokaz odbywa się dla małej publiczności, zazwyczaj kilku - kilkunastoosobowej. Obejmuje prezentację trików z częstym i bezpośrednim udziałem widzów. Każdy pokaz jest dostosowywany do wymagań klienta.
+							Mikroiluzja - iluzja stolikowa - to kategoria sztuki iluzji obejmująca prezentacje efektów iluzjonistycznych z zastosowaniem małych rekwizytów, takich jak: karty, monety oraz przedmioty codziennego użytku. Pokaz odbywa się dla małej publiczności, zazwyczaj kilku - kilkunastoosobowej. Obejmuje prezentację trików z częstym i bezpośrednim udziałem widzów. Każdy pokaz jest dostosowywany do wymagań klienta.
 					</div> <!-- offer-desc2  -->
 	
-					<div class="offer-photo2">
-						<div id="slider2"></div>
-						<span onclick="ustawslajd2(6)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd2(7)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd2(8)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd2(9)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd2(10)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-					</div> <!-- offer-photo2  -->
+					<div class="photo-with-dots">
+					
+						<div class="offer-photo2">
+							<div id="slider2"></div>
+						</div> <!-- offer-photo2  -->
+							
+							<div style="clear: both;"></div>
+							<span  style="cursor:pointer; font-size: 12px;">
+							<div  class="previous" onclick="previousSlide2()"> <i class="icon-left-big"></i></div>
+							<div id="dot2-1" onclick="setSlide2(1)" style="display: inline;"><i class="icon-circle"></i> </div>
+							<div id="dot2-2" onclick="setSlide2(2)" style="display: inline;"> <i class="icon-circle"></i> </div>
+							<div id="dot2-3" onclick="setSlide2(3)" style="display: inline;" > <i class="icon-circle"></i> </div>
+							<div id="dot2-4" onclick="setSlide2(4)" style="display: inline;"> <i class="icon-circle"></i> </div>
+							<div id="dot2-5" onclick="setSlide2(5)" style="display: inline;"> <i class="icon-circle"></i> </div> 
+							<div  class="next" onclick="nextSlide2()"> <i class="icon-right-big"></i> </div>
+							</span>
+				
+					</div><!-- photo-with-dots -->
 	
 				</div> <!-- offer2 -->
 				
@@ -106,20 +128,31 @@
 							<h3> Pokazy sceniczne </h3>
 							Pokaz sceniczny to starannie przygotowane show, odbywające się na scenie - zazwyczaj dla większej publiczności. W jego trakcie prezentowane są efekty manipulacyjne oraz z wykorzystaniem różnego rodzaju rekwizytów. Pokazowi towarzyszy muzyka, która dodaje klimatu oraz sprawia, że wrażenia widzów stają się jeszcze mocniejsze. Czas trwania takiej etiudy iluzjonistycznej wynosi około 15-20 minut.
 					</div> <!--  offer-desc -->
-	
-					<div class="offer-photo">
-						<div id="slider3"></div>
-						<span onclick="ustawslajd3(11)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd3(12)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd3(13)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd3(14)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-						<span onclick="ustawslajd3(15)" style="cursor:pointer; font-size: 12px;"> <i class="icon-circle"></i> </span>
-					</div> <!--  offer-photo -->
-	
+				
+					<div class="photo-with-dots">
+					
+						<div class="offer-photo">
+							<div id="slider3"></div>
+						</div> <!--  offer-photo -->
+					
+						<div style="clear: both;"></div>
+						<span  style="cursor:pointer; font-size: 12px;">
+						<div class="previous" onclick="previousSlide3()"> <i class="icon-left-big"></i></div>
+						<div id="dot3-1" onclick="setSlide3(1)" style="display: inline;"><i class="icon-circle"></i> </div>
+						<div id="dot3-2" onclick="setSlide3(2)" style="display: inline;"> <i class="icon-circle"></i> </div>
+						<div id="dot3-3" onclick="setSlide3(3)" style="display: inline;" > <i class="icon-circle"></i> </div>
+						<div id="dot3-4" onclick="setSlide3(4)" style="display: inline;"> <i class="icon-circle"></i> </div>
+						<div id="dot3-5" onclick="setSlide3(5)" style="display: inline;"> <i class="icon-circle"></i> </div> 
+						<div class="next" onclick="nextSlide3()"> <i class="icon-right-big"></i> </div>
+						
+						</span>
+					
+					</div> <!-- photo-with-dots -->
 				</div> <!-- offer3 -->
 			
 				<div style="clear: both;"></div>
-				<div id="film1"></div> <!-- navigation div  -->
+				
+				<div id="movie1"></div> <!-- navigation div  -->
 				
 				<div  class="movie">
 					<iframe src="https://www.youtube.com/embed/kKyxyaikglI?controls=1&loop=1&modestbranding=1&color=white" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -128,18 +161,28 @@
 				<div style="clear: both;"></div>
 				<div id="contact1" ></div> <!--  navigation div -->
 			
-				<div class="contact">
-						<h2> KONTAKT </h2>
-						Jeżeli są Państwo zainteresowani ofertą <br/>w zakresie indywidualnych możliwości oraz wyceny pokazu zapraszam do kontaktu: </br><br/>
-						mail: oskartrybus@outlook.com </br>
-						kom.: +48 512 762 614 <br/>
-				</div> <!-- contact -->
+			
+				<div class="contact-with-icons">
 				
-				<div class = "square">
-					<a href="mailto:someone@example.com?Subject=Pokazy%20iluzjonistyczne%20kontakt"><div class="tile1"><i class="icon-mail-squared"></i></i><span style="font-size: 16px;"><br />Wyślij e-maila</span></div></a>
-					<a href="https://m.me/oskar.trybus" target="_top"><div class="tile1"><i class="icon-comment"></i><span style="font-size: 16px;"><br />Wyślij wiadomość przez messenger</span></div>
-					<div style = "clear: both;"></div></a>
-				</div> <!-- square  -->
+					<div class="contact">
+							<h2> KONTAKT </h2>
+							Jeżeli są Państwo zainteresowani ofertą <br/>w zakresie indywidualnych możliwości oraz wyceny pokazu zapraszam do kontaktu: </br><br/>
+							mail: oskartrybus@outlook.com </br>
+							kom.: +48 512 762 614 <br/>
+					</div> <!-- contact -->
+				
+					<div class = "square">
+				
+						<a href="mailto:oskartrybus@outlook.com?Subject=Pokazy%20iluzjonistyczne%20kontakt">
+						<div class="tile1"><div class="icon-in-contact"><i class="icon-mail-squared"></i></div><span style="font-size: 23px;"> Wyślij e-maila</span></div></a>
+					
+						<a href="https://m.me/oskar.trybus" target="_top">
+						<div class="tile1"><div class="icon-in-contact"><i class="icon-comment"></i></div><span style="font-size: 23px;"> Wyślij wiadomość przez messenger</span></div>
+						
+						<div style = "clear: both;"></div></a>
+					</div> <!-- square  -->
+				
+				</div> <!-- contact with icons  -->
 				
 				<div style="clear: both;"></div>
 			

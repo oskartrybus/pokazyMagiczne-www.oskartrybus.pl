@@ -1,20 +1,21 @@
 body {
-	background: rgb(0,0,0);
-	background: linear-gradient(90deg, rgba(0,0,0,1) 10%, rgba(0,0,97,0.8379551649761467) 50%, rgba(71,0,82,1) 90%);
+	background: linear-gradient(90deg, rgba(71,0,82,1) 3%, rgba(0,0,97,0.8379551649761467) 30%, rgba(0,0,97,0.8379551649761467) 60%, rgba(0,0,0,1) 93%);
+	background-color: black;
 	margin: 0;
 	font-family: 'Bebas Neue', cursive;
 	letter-spacing: 1px;
 	overflow-x: hidden;
     max-width: 100%;
     overflow-x: hidden;
+	z-index: 1;
 }
 
 #wrapper {
-	width = 100%;
+	width: 100%;
 	color: #ffffff;
 }
 
-/* Navbar & friends: */
+											/* Navbar & friends: */
 .sticky {
 	width: 100%;
 	position: fixed;
@@ -22,7 +23,8 @@ body {
 	top: 0;
 	z-index: 100;
     display: block;
-	background-color: #000022;
+	background-color: #000000;
+	opacity: 0.88;
 }
 .topnav {
 	text-align: right;
@@ -33,46 +35,72 @@ body {
 	transition: background-color 0.7s ease-out;
 }
 .topnav a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  z-index: 200;
+	float: right;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 22px;
+	z-index: 200;
 }
 .topnav a:hover {
-  background-color: #777;
+	background-color: #777;
+	-webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
 }
 .topnav a.active {
-  background-color: #4CAF50;
+	background-color: #4CAF50;
 }
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
-  display: none;
+	display: none;
 }
 
-/* Content & others: */
+										/* Main content: */
 .main-content {
 	margin-left: 3%;
 	margin-right: 3%;
 }
 .main {
-	margin-top: 15%;
-	font-size: 3em;
-	text-align: center;
 	width: 40%;
+	margin-top: 4%;
+	margin-left: 2%;
+	font-size: 3.4em;
+	letter-spacing: 1px;
+	text-align: center;
 	float: left;
-	margin-bottom: 0;
+}
+.quote {
+	font-size: 0.60em; 
+	margin-top: 6%; 
+	font-family: 'Amatic SC', cursive;
+}
+.call-to-action {
+	margin: 15%; 
+	background-color: #4CAF50;
+	border-radius: 20% 1% 20% 1%;
+	padding: 3%; 
+	font-family: 'Amatic SC', cursive;
+	transition: all 0.2s ease-in-out;
+}
+.call-to-action:hover
+{
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+}
+a {
+	text-decoration: none;
 }
 .main-photo {
-	margin-top: 2%;
 	width: 55%;
-	float: left;
-	border-bottom: 5% solid black;
+	margin-top: 2%;
 	margin-bottom: 5%;
-	margin-left: 5%;
+	margin-left: 3%;
+	border-bottom: 4% solid black;
+	float: left;
 }
 .main-photo img {
 	width: 90%;
@@ -80,6 +108,7 @@ body {
 	opacity: 0.8;
 	border-bottom: 10px solid black;
 }
+										/* Offer: */
 .offer {
 	margin-left: 5%;
 	margin-right: 5%;
@@ -87,66 +116,97 @@ body {
 	font-size: 1.5em;
 }
 .offer-photo {
-	float: left;
-	max-width: 45%;
-	min-width: 45%;
+	width: 520px;
+	height: 390px;
 	overflow: visible;
-	margin-left: 4%;
-	margin-top: 2%;
+	margin-top: 3%;
+	margin-bottom: 2%;
 	text-align: center;
 	max-height: 100%;
 	min-height: 100%;
+	border: 0.3em solid black;
+	display: block;
+	float: left;
+}
+.photo-with-dots {
+	max-width: 44%;
+    min-width: 44%;
+	margin-left: 4%;
+	margin-top: 3%;
+	text-align: center;
+	color: white;
+	float: left;
+}
+.grey-dot {
+	color:  #888888;
+	transition: all 0.2s ease-in-out;
 }
 .offer-photo img {
-	border: 0.3em solid black;
 	max-width: 100%;
 	min-width: 100%;
-	max-height: 100%;
-	min-height: 100%;
+	float: left;
 }
 .offer-desc {
-	float: left;
-	text-align: justify;
 	max-width: 48%;
 	min-width: 48%;
 	padding: 1%;
+	text-align: justify;
 	font-family: 'Fira Sans Condensed', sans-serif;
+	float: left;
 }
 .offer-photo2 {
-	float: right;
-	max-width: 40%;
-	min-width: 40%;
-	overflow: visible;
-	margin-right: 4%;
-	margin-top: 2%;
+	width: 520px;
+	height: 390px;
+	margin-top: 3%;
+	margin-bottom: 2%;
 	text-align: center;
-	max-height: 100%;
-	min-height: 100%;
+	border: 0.3em solid black;
+	display: block;
+	overflow: visible;
+	float: right;
 }
 .offer-photo2 img {
-	border: 0.3em solid black;
 	max-width: 100%;
 	min-width: 100%;
-	max-height: 100%;
-	min-height: 100%;
+	float: right;
 }
 .offer-desc2 {
-	float: right;
-	text-align: justify;
 	max-width: 48%;
 	min-width: 48%;
 	padding: 1%;
+	text-align: justify;
 	font-family: 'Fira Sans Condensed', sans-serif;
+	float: right;
 }
+.previous {
+	display: inline; 
+	margin-right: 4em;
+	font-size: 1.5em;
+	transition: color 0.3s ease-in-out;
+}
+.previous:hover {
+	color: #888888;
+}
+.next {
+	margin-left: 4em;
+	font-size: 1.5em;
+	display: inline; 
+	transition: color 0.3s ease-in-out;
+}
+.next:hover {
+	color: #888888;
+}
+										/* Movie: */
 .movie {
-	margin: 10%;
 	height: 560px;
+	margin: 10%;
 	border: 5px solid #4CAF50;
 }
 .movie iframe {
 	width: 100%;
 	height: 100%;
 }
+										/* Contact and footer */
 .contact {
 	background-color: white;
 	opacity: 0.5;
@@ -164,35 +224,25 @@ body {
 	line-height: 1.6;
 	float: left;
 }
-.rest-content img {
-	width: 8%;
-	opacity: 0.8;
-	margin-top: 3%;
-	margin-right: 1%;
-	float: left;
-}
 .square
 {
-	margin-top: 10%;
-	font-size: 50px;
-	height: 30%;
 	width: 40%;
 	float: left;
 	color: white;
 }
 .tile1
 {
-	padding: 1.5%;
+	min-height: 86px;
+	max-width: 100%;
 	margin-top: 0px;
-	width: 44%;
-	height: 50%;
-	float: left;
 	text-align: center;
+	padding: 10%;
+	opacity: 0.8;
+	transition: background-color 0.3s ease-in-out;
 }
 .tile1:hover
 {
 	background-color: #4CAF50;
-	opacity: 0.8;
 }
 a:link {
   color: white;
@@ -206,6 +256,11 @@ a:hover {
 a:active {
   color: white;
 } 
+.icon-in-contact {
+	float: left;
+	width: 40%;
+	font-size: 5.5em;
+}
 .rectangle
 {
 	max-width: 100%;
@@ -218,137 +273,158 @@ a:active {
 	text-decoration: none;
 }
 
-/* Adding responsive content:  */
-@media screen and (max-width: 600px) {
+										/* Adding responsive content:  */
+@media screen and (max-width: 1160px) {
 	.topnav a:not(:first-child) {
-	  display: none;
+		display: none;
 	}
 	.topnav a.icon {
-    float: left;
-    display: block;
+		float: left;
+		display: block;
 	}
-}
-@media screen and (max-width: 600px) {
 	.topnav.responsive {
-	width: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 100;
-    display: block;
-	background-color: #000022;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 100;
+		display: block;
+		background-color: #000022;
 	}
 	.topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 	.topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+		float: none;
+		display: block;
+		text-align: left;
 	}
 	.main-photo {
-	  clear: both;
-	  margin-left: 25%;
+		clear: both;
+		margin-left: 25%;
 	}
 	.main {
-    clear: both;
-	text-align: center;
-	width: 100%;
-	font-size: 2em;
-	margin-bottom: 20%;
+		width: 100%;
+		margin-top: 15%;
+		text-align: center;
+		font-size: 2em;
+		clear: both;
+	}
+	.photo-with-dots {
+		max-width: 84%;
+		min-width:80%;
+		max-height: 50%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.offer-photo {
-	max-width: 90%;
-	margin-left: 4%;
-	margin-top: 2%;
-	text-align: center;
-	max-height: 100%;
-	min-height: 100%;
+		height: 100%;
+		max-width: 100%;
+		text-align: center;
+		margin-top: 3%;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
+		float: none;
+	}
+	.previous {
+		display: inline; 
+		margin-right: 0;
+	}
+	.next {
+		margin-left: 0;
 	}
 	.offer-desc {
-	text-align: justify;
-	max-width: 100%;
-	min-width: 100%;
-	padding: 1%;
-	font-size: 0.8em;
+		max-width: 100%;
+		min-width: 100%;
+		text-align: justify;
+		padding: 1%;
+		font-size: 0.8em;
 	}
 	.offer-photo2 {
-	max-width: 90%;
-	margin-left: 4%;
-	margin-top: 2%;
-	text-align: center;
-	max-height: 100%;
-	min-height: 100%;
+		max-width: 100%;
+		height: 100%;
+		text-align: center;
+		margin-top: 3%;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
+		float: none;
 	}
 	.offer-desc2 {
-	text-align: justify;
-	max-width: 100%;
-	min-width: 100%;
-	padding: 1%;
-	font-size: 0.8em;
+		text-align: justify;
+		max-width: 100%;
+		min-width: 100%;
+		padding: 1%;
+		font-size: 0.8em;
 	}
 	.movie {
-	margin: 10%;
-	width: 80%;
-	height: 60%;
-	border: 5px solid #4CAF50;
+		margin: 10%;
+		width: 80%;
+		height: 12em;
+		border: 5px solid #4CAF50;
 	}
 	.contact {
-	background-color: white;
-	opacity: 0.5;
-	width: 73%;
-	margin: 10%;
-	margin-bottom: 0%;
-	margin-top: 0;
-	margin-right: 3%;
-	color: black;
-	font-size: 0.9em;
-	text-align: center;
-	padding: 5%;
-	padding-top: 2%;
-	padding-bottom: 3%;
-	line-height: 1.6;
+		background-color: white;
+		opacity: 0.5;
+		width: 73%;
+		margin: 10%;
+		margin-bottom: 0%;
+		margin-top: 0;
+		margin-right: 3%;
+		color: black;
+		font-size: 0.9em;
+		text-align: center;
+		padding: 5%;
+		padding-top: 2%;
+		padding-bottom: 3%;
+		line-height: 1.6;
+		float: none;
 	}
 	.square {
-	margin: 10%;
-	font-size: 50px;
-	height: 30%;
-	width: 80%;
-	color: white;
+		float: none;
+		margin: 10%;
+		font-size: 40px;
+		height: 30%;
+		width: 80%;
+		color: white;
 	}
-	.tile1
-	{
-	padding: 1%;
-	margin: 2%;
-	margin-top: 0px;
-	width: 100%;
-	height: 50%;
-	text-align: center;
+	.tile1 {
+		width: 100%;
+		height: 50%;
+		padding: 1%;
+		margin-top: 0px;
+		text-align: center;
+	}
+	.icon-in-contact {
+		width: 100%;
+		font-size: 1em;
+		text-align: center;
+		padding: 3%;
 	}
 }  
-
 
 														/* EDITING THE SCROLLBAR */
 /* The emerging W3C standard
    that is currently Firefox-only */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #4CAF50 black;
+	scrollbar-width: thin;
+	scrollbar-color: #4CAF50 black;
 }
 
 /* Works on Chrome/Edge/Safari */
 *::-webkit-scrollbar {
-  width: 12px;
+	width: 12px;
 }
 *::-webkit-scrollbar-track {
-  background: black;
+	background: black;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #4CAF50;
-  border-radius: 18px;
-  border: 3px solid black;
+	background-color: #4CAF50;
+	border-radius: 18px;
+	border: 3px solid black;
 }
 
 
